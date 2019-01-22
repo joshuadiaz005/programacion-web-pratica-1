@@ -3,6 +3,7 @@ package com.joshua.practica1;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -20,5 +21,7 @@ public class Main {
         Document document = Jsoup.connect(url).get();
 
         System.out.println("Cantidad de parrafos: " + document.getElementsByTag("p").size());
+
+        System.out.println("Cantidad de imagenes dentro de los parrafos: " + document.select("p img").size());
     }
 }
