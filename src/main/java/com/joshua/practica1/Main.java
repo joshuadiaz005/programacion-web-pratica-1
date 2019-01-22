@@ -2,6 +2,7 @@ package com.joshua.practica1;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -14,6 +15,10 @@ public class Main {
 
         Connection.Response response = Jsoup.connect(url).execute();
 
-        System.out.println("Cantidad de lineas retornado" + response.body().split("\n").length);
+        System.out.println("Cantidad de lineas retornado: " + response.body().split("\n").length);
+
+        Document document = Jsoup.connect(url).get();
+
+        System.out.println("Cantidad de parrafos: " + document.getElementsByTag("p").size());
     }
 }
