@@ -35,13 +35,13 @@ public class Main {
             System.out.println("Form: id = " + formularioCant);
 
             for(Element input : formulario.getElementsByTag("input")) {
-                System.out.println("\tInput: id = " + formularioInput + "tipo: " + input.attr("type"));
+                System.out.println("\tInput: id = " + formularioInput + " tipo: " + input.attr("type"));
 
                 formularioInput++;
             }
             formularioCant++;
         }
 
-        
+
     }
 }
