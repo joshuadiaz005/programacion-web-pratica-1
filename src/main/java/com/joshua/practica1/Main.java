@@ -25,5 +25,7 @@ public class Main {
         System.out.println("Cantidad de imagenes dentro de los parrafos: " + document.select("p img").size());
 
         System.out.println("Cantidad de formularios que contiene el HTML categorizando por el método GET: " + document.select("form[method='GET']").size());
+
+        System.out.println("Cantidad de formularios que contiene el HTML categorizando por el método POST: " + document.select("form[method='POST']").size());
     }
 }
